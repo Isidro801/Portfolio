@@ -29,7 +29,7 @@ const projects = [
     {
         title:"GRC Dashboard",
         description:"Realizando un software de gestión de cumplimiento y gestión de riesgos, aplicado a la cadena hotelera ficticia DeepBlue Hotels",
-        image:"../assets/projects/GRC-coming-soon.png",
+        image:"projects/GRC-coming-soon.png",
         tags: ["Gestión de riesgos, Cumplimiento normativo, KPIs, Redacción de informes, Auditorías"],
         link: "#",
         github: "#",
@@ -37,7 +37,7 @@ const projects = [
      {
         title:"Deep Blue Tanks",
         description:"Trabajo final de Grado. Peceras dinámicas donde el usuaro configurará parámetros físicos y químicos siguiendo el manual de cada especie de las profundidades del océano. *Pasando proyecto a REACT y tecnologías modernas",
-        image:"../assets/projects/proyecto4.png",
+        image:"projects/proyecto4.png",
         tags: ["Javascript, HTML, CSS, PHP, Myql"],
         link: "#",
         github: "#",

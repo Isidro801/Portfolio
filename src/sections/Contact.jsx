@@ -104,8 +104,8 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div className="glass p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 max-w-5xl mx-auto px-4 sm:px-6 w-full overflow-hidden">
+          <div className="glass p-6 sm:p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300 w-full">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
@@ -130,12 +130,13 @@ export const Contact = () => {
               <div>
                 <label
                   htmlFor="email"
-                  type="email"
                   className="block text-sm font-medium mb-2"
                 >
                   Email
                 </label>
                 <input
+                  id="email"
+                  type="email"
                   required
                   placeholder="...@gmail.com"
                   value={formData.email}
@@ -176,7 +177,7 @@ export const Contact = () => {
                 ) : (
                   <>
                     Enviar Mensaje
-                    <FaRegPaperPlane className="w-5 h-5" />
+                    <FaRegPaperPlane className="w-5 h-5 ml-2" />
                   </>
                 )}
               </Button>
@@ -184,11 +185,11 @@ export const Contact = () => {
               {submitStatus.type && (
                 <div
                   className={`flex items-center gap-3
-                     p-4 rounded-xl ${
-                       submitStatus.type === "success"
-                         ? "bg-green-500/10 border border-green-500/20 text-green-400"
-                         : "bg-red-500/10 border border-red-500/20 text-red-400"
-                     }`}
+                    p-4 rounded-xl ${
+                      submitStatus.type === "success"
+                        ? "bg-green-500/10 border border-green-500/20 text-green-400"
+                        : "bg-red-500/10 border border-red-500/20 text-red-400"
+                    }`}
                 >
                   {submitStatus.type === "success" ? (
                     <FaRegCircleCheck  className="w-5 h-5 shrink-0" />
@@ -202,8 +203,8 @@ export const Contact = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-6 animate-fade-in animation-delay-400">
-            <div className="glass rounded-3xl p-8">
+          <div className="space-y-6 animate-fade-in animation-delay-400 w-full">
+            <div className="glass rounded-3xl p-6 sm:p-8">
               <h3 className="text-xl font-semibold mb-6">
                 Información de contacto
               </h3>
@@ -212,16 +213,16 @@ export const Contact = () => {
                   <a
                     key={i}
                     href={item.href}
-                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group overflow-hidden"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <div className="w-12 h-12 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <item.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <div className="text-sm text-muted-foreground">
                         {item.label}
                       </div>
-                      <div className="font-medium">{item.value}</div>
+                      <div className="font-medium truncate">{item.value}</div>
                     </div>
                   </a>
                 ))}
@@ -229,7 +230,7 @@ export const Contact = () => {
             </div>
 
             {/* Availability Card */}
-            <div className="glass rounded-3xl p-8 border border-primary/30">
+            <div className="glass rounded-3xl p-6 sm:p-8 border border-primary/30">
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                 <span className="font-medium">Disponibilidad 24/7</span>

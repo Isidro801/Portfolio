@@ -90,11 +90,11 @@ export const Projects = () => {
 
       {/* Etiqueta Coming Soon - Centrada */}
       
-      <div className="absolute inset-0 flex items-center justify-center  z-10">
-        <h1 className=" px-8 py-4 rounded-full bg-surface  backdrop-blur-md border border-white/10 text-white font-bold text-4xl uppercase tracking-widest shadow-xl font-serif italic">
-  Coming Soon
-</h1>
-      </div>
+      <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
+  <h1 className="px-6 py-3 sm:px-8 sm:py-4 rounded-full bg-surface backdrop-blur-md border border-white/10 text-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl uppercase tracking-wider sm:tracking-widest shadow-xl font-serif italic text-center">
+    Coming Soon
+  </h1>
+</div>
 
       {/* Links de acción (Hover) */}
       {/* <div className="absolute inset-0 z-20 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
